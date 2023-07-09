@@ -30,6 +30,7 @@ function showTrivia(json) {
         question.innerText = strTemp;
         answer.innerText = index.correct_answer;
 
+        answerB.innerText = "Show Answer";
         answerB.addEventListener("click", () => { 
             if(answer.className == "hidden"){
                 answer.className = "show";
