@@ -24,7 +24,10 @@ function showTrivia(json) {
         answer.className = "hidden";
 
         category.innerText = index.category;
-        question.innerText = index.question;
+        let strTemp = index.question;
+        strTemp = strTemp.replaceAll(/&quot;/g, '\"');
+        strTemp = strTemp.replaceAll(/&#039;/g, '\'');
+        question.innerText = strTemp;
         answer.innerText = index.correct_answer;
 
         answerB.addEventListener("click", () => { 
